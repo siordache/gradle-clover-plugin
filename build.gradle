@@ -42,7 +42,7 @@ tasks.withType(GroovyCompile) {
 task integrationTest(type: Test, dependsOn: test) {
     description = 'Runs the integration tests.'
     group = 'verification'
-    testClassesDir = sourceSets.integrationTest.output.classesDir
+    testClassesDirs = sourceSets.integrationTest.output.classesDirs
     classpath = sourceSets.integrationTest.runtimeClasspath
 
     if (project.hasProperty('rerun')) {
@@ -92,7 +92,7 @@ if (project.hasProperty('selfCheck')) {
     clover {
         additionalTestSourceSets << [
             srcDirs: sourceSets.integrationTest.allSource.srcDirs,
-            classesDir: sourceSets.integrationTest.output.classesDir
+            classesDirs: sourceSets.integrationTest.output.classesDirs
         ]
 
         report {

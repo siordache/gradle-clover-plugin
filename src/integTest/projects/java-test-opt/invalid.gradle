@@ -2,7 +2,7 @@ import com.bmuschko.gradle.clover.CloverPlugin
 
 buildscript {
     dependencies {
-        classpath files('../../../../build/classes/main')
+        classpath files('../../../../build/classes/java/main', '../../../../build/classes/groovy/main')
     }
 }
 

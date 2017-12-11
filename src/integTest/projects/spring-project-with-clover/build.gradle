@@ -5,7 +5,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath files('../../../../build/classes/main')
+        classpath files('../../../../build/classes/java/main', '../../../../build/classes/groovy/main')
         classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.6.RELEASE")
     }
 }
